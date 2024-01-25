@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    table{
+        background-color: WHITE;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:1em;
+        padding:15 px;
+        
+    }
+    tr,td,th{
+        padding:15px;
+        text-align: center;
+        color: BLACK;
+        border-collapse: collapse;
+    }
+    .center th{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        margin-top: 2em;
+        background-color:black;
+        color: white;
+    }
+</style>
+<body>
+    <h2>FORM VALIDATION</h2>
+    <form name="form" action="" method="POST" onsubmit="validateForm()">
+        <table >
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="fname"> </td>
+            </tr>
+            <tr>
+                <th>Email </th>
+                <td><input type="email" name="email"> </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td width="50%"><textarea name="add"></textarea></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input name="age" type="text" size="3" maxlength="3"></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td><select name="country">
+                    <option>Indian</option>
+                    <option>British</option>
+                    <option>German</option>
+                </select></td></tr>
+            <tr>
+                <th>Mob NO </th>
+                <td><input type="tel" name="mob"> </td>
+            </tr>
+            <tr>
+                <th>Username </th>
+                <td><input type="text" name="user"> </td>
+            </tr>
+            <tr>
+                <th>Password </th>
+                <td><input type="password" name="pw"> </td>
+            </tr>
+            <tr class="center">
+                <th colspan="2"><input type="submit" value="submit"></th>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validateForm() {
+            var fname = document.form.fname.value;
+            var address=document.form.add.value;
+            var age=document.form.age.value;
+            var country=document.form.country.value;
+            var mob = document.form.mob.value;
+            var user = document.form.user.value;
+            var passcode = document.form.pw.value;
+            var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            var ren = /[0-9!@#$%^&*]/
+
+            if (fname == "") {
+                alert("Enter First Name !!");
+                document.form.fname.focus();
+                return false;
+            }
+            else if(ren.test(fname)){
+                alert("Enter Valid Name !!");
+                document.form.fname.focus();
+                return false;
+            }
+            else{
+                alert("Please Enter alphabtes Only");
+                return false;
+            }
+
+            if (country== "") {
+                alert("Select a Country!!");
+                return false;
+            }
+            if (mob == "") {
+                alert("Enter Mobile number");
+                return false;
+            }
+            else if (isNaN(mob) || mob.length != 10) {
+                alert("Enter valid Mobile number");
+                return false;
+            }
+            else {
+                alert("Enter Mobile number with 10 digit");
+                return false;
+            }
+
+            if (user == "") {
+                alert("Enter User Name !!");
+                document.form.user.focus();
+                return false;
+            }
+            else if(user.length>8 || user.length<12){
+                alert("Enter minimum 8 digit UserName");
+                document.form.user.focus();
+                return false;
+            }
+
+            if (pw== "" || pw.length < 8||) {
+                alert("Enter minimum 8 digit Password !!" + '\n' + "Atleast one Lowercase & uppercase & digti & special charecter must be included");
+                document.form.passcode.focus();
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

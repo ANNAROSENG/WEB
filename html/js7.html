@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>change</title>
+	<link rel="stylesheet" href="bg.css">
+</head>
+<body>
+<h1  align="center" id="h">EVENT HANDLING</h1>
+Change background color: 
+<button onclick="changeback('Red')">RED</button>
+<button onclick="changeback('Blue')">BLUE</button>
+<button onclick="changeback('green')">GREEN</button><br><br>
+Change Heading Color:
+<button onclick="changehead('yellow')">YELLOW</button>
+<button onclick="changehead('orange')">ORANGE</button>
+<button onclick="changehead('Red')">RED</button>
+<script>
+	function changeback(color){
+		document.body.style.background=color;
+	}
+	function changehead(color){
+		var c=document.getElementById("h");
+		c.style.background=color;
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><table border="2"></table>
+	<style>
+	h1{
+        text-align: center;
+        margin-top: 10px;
+        background-color:black;
+        color: white;
+    }
+    button{
+	color:navajowhite;
+	background-color:darkred;
+}
+</style>
+<h1><center>ONLINE QUIZ</center></h1><h3>
+Q1 : ________ is the father of computer.<br>
+<input type="radio" name="qtn"  id="q1">
+a.Charles Babbage&nbsp;<input name="qtn" type="radio">
+b.Bill Gates&nbsp;<input type="radio" name="qtn">
+c.Dennis Ritich&nbsp;<br><br>
+Q2 :_______ is the brain of computer system.<br><br>
+<input type="radio" name="qn" id="q2">
+a.CPU&nbsp;<input type="radio" name="qn">
+b.RAM&nbsp;<input type="radio" name="qn">
+c.ROM&nbsp;<br>
+<br> 
+Q3 :______ is the temporay memory.<br>
+<input type="radio" name="3" >
+a.SSD&nbsp;<input type="radio" id="q3" name="3">
+b.RAM&nbsp;<input type="radio" name="3">
+c.ROM&nbsp;<br>
+<br> 
+Q4 : What is the half byte called? 
+<br>
+<input type="radio" name="4" id="q4">
+a.Nibble
+&nbsp;<input type="radio" name="4">
+b.Kilo Byte&nbsp;
+<input type="radio" name="4">c.Bit
+&nbsp;<br>
+<br>
+Q5 : One Terabyte = 
+<br>
+<input type="radio" name="5">
+a.1023 Gb
+&nbsp;<input type="radio" name="5">
+b.1200 Gb&nbsp;
+<input type="radio" id="q5" name="5">c.1024 Gb
+&nbsp;<br>
+<br>
+Q6 :Which among the following works faster.<br>
+<input type="radio" id="q6" name="6" >
+a.Cache&nbsp;<input type="radio" name="6">
+b.RAM&nbsp;<input type="radio" name="6">
+c.ROM&nbsp;<br>
+<br>
+Q7 : Which among the following was the first computer virus detected in India?.<br>
+<input type="radio"  name="7" >
+a.Good Moring&nbsp;<input type="radio" name="7">
+b.Hi&nbsp;<input type="radio" id="q7" name="7">
+c.Happy Birthday Joshi&nbsp;<br>
+<br>
+Q8 : If you need to copy the contents of MS Word, which command will you give?
+<br>
+<input type="radio" name="8" >
+a.Ctrl+X&nbsp;<input type="radio" id="q8" name="8">
+b.Ctrl+C&nbsp;<input type="radio"  name="8">
+c.Ctrl+A&nbsp;<br>
+<br> 
+Q9 :ALU stands for.<br>
+<input type="radio" name="9" >
+a.Algorithm and logical unit&nbsp;<input type="radio" id="q9" name="9">
+b.Arithmetic and logical unit
+&nbsp;<input type="radio" name="9">
+c. Algorithm and logarithm unit&nbsp;<br>&nbsp;<br>
+<br> 
+Q10 : The CPU and memory are located on .<br>
+<input type="radio" name="10" >
+a.Keyboard&nbsp;<input type="radio" id="q10" name="10">
+b.Motherboard&nbsp;<input type="radio" name="10">
+c.Sound board&nbsp;<br>
+<br> 
+<center>
+<button onclick="exam()">SUBMIT</button></center>
+<script type="text/javascript">
+	function exam(){
+		var score;
+		score=0
+		if(document.getElementById("q1").checked)
+			score=score+1;
+		if(document.getElementById("q2").checked)
+			score=score+1;
+		if(document.getElementById("q3").checked)
+			score=score+1;
+		if(document.getElementById("q4").checked)
+			score=score+1;
+		if(document.getElementById("q5").checked)
+			score=score+1;
+		if(document.getElementById("q6").checked)
+			score=score+1;
+		if(document.getElementById("q7").checked)
+			score=score+1;
+		if(document.getElementById("q8").checked)
+			score=score+1;
+		if(document.getElementById("q9").checked)
+			score=score+1;
+		if(document.getElementById("q10").checked)
+			score=score+1;
+		alert("Your score is "+score);
+	}
+</script>
+</h3>
+</table>
+</body>
+</html>

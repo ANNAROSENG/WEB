@@ -1,0 +1,54 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function Add()
+{
+let num1=document.getElementById(&quot;num1&quot;).value;
+let num2=document.getElementById(&quot;num2&quot;).value;
+let result=document.getElementById(&quot;result&quot;);
+result.value=parseInt(num1)+parseInt(num2);
+}
+function Add()
+{
+let num1=document.getElementById(&quot;num1&quot;).value;
+let num2=document.getElementById(&quot;num2&quot;).value;
+let result=document.getElementById(&quot;result&quot;);
+result.value=parseInt(num1)+parseInt(num2);
+}
+function Sub()
+{
+let num1=document.getElementById(&quot;num1&quot;).value;
+let num2=document.getElementById(&quot;num2&quot;).value;
+let result=document.getElementById(&quot;result&quot;);
+result.value=parseInt(num1)-parseInt(num2);
+}
+function Mul()
+{
+let num1=document.getElementById(&quot;num1&quot;).value;
+let num2=document.getElementById(&quot;num2&quot;).value;
+let result=document.getElementById(&quot;result&quot;);
+result.value=parseInt(num1)*parseInt(num2);
+}
+function Div()
+{
+let num1=document.getElementById(&quot;num1&quot;).value;
+let num2=document.getElementById(&quot;num2&quot;).value;
+let result=document.getElementById(&quot;result&quot;);
+result.value=parseInt(num1)/parseInt(num2);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;label for=&quot;num1&quot;&gt;Enter number 1 :&lt;/label&gt;
+&lt;input type=&quot;number&quot; id=&quot;num1&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;num2&quot;&gt;Enter number 2 :&lt;/label&gt;
+&lt;input type=&quot;number&quot; id=&quot;num2&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;but&quot;&gt;operation&lt;/label&gt;
+&lt;button id=&quot;but&quot; onClick=&quot;Add()&quot;&gt;ADD&lt;/button&gt;&amp;nbsp;&amp;nbsp;
+&lt;button id=&quot;but&quot; onClick=&quot;Sub()&quot;&gt;SUB&lt;/button&gt;&amp;nbsp;&amp;nbsp
+&lt;button id=&quot;but&quot; onClick=&quot;Mul()&quot;&gt;MUL&lt;/button&gt;&amp;nbsp;&amp;nbsp;
+&lt;button id=&quot;but&quot; onClick=&quot;Div()&quot;&gt;DIV&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;result&quot;&gt;Result :&lt;/label&gt;
+&lt;input type=&quot;number&quot; id=&quot;result&quot; readonly&gt;
+&lt;/body&gt;
+&lt;/html&gt;

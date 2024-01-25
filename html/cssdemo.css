@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	background-image: linear-gradient(to top,rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5),url("xplore.jpg"));
+	background-position: center;
+	background-size: cover;
+	padding: 10px 8%;
+}
+
+.pos{
+
+      position:relative;
+      left:400px;
+}
+.logo{
+	color: #ff7200;
+	cursor: pointer;
+	font-size: 35px;
+	font-family: Arial;
+	padding-left: 20px;
+	float: left;
+	padding-top: 10px;
+}
+.icon{
+	width: 200px;
+	float: left;
+	height: 70px;
+}
+.navbar ul{
+	list-style: none;
+	float: left;
+	width: 100px;
+	display: flex;
+	text-align: right;
+	padding-right: 60px;
+	justify-content: center;
+	align-items: center;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 10px 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color:  #ff7200;
+	font-family: Arial;
+	font-weight: bold;
+	transition: 0.4s ease-in-out;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+	color: blueviolet;
+}

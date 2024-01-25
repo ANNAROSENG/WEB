@@ -1,0 +1,58 @@
+<html>
+<head>
+<body>
+        <style>
+    table{
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:1em;
+        padding:15px;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    }
+    tr,td,th{
+        padding:10px;
+        text-align: left;
+        color: white;
+        border-collapse: collapse;
+    }
+    .center th{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        margin-top: 10px;
+        background-color:white;
+        color: black;
+    }
+    body{
+        background-color:black;
+    }
+</style>
+<table>
+	<form name="form" action="regf.php" method="POST" onsubmit="return validateForm()">
+        <td><h1>Registraion Form</h1><br><br>
+        </h1></td>
+		<tr>
+                <th>Name</th>
+                <td><input type="text" name="txt1"> </td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input name="txt2" type="text" size="3" maxlength="3"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td width="50%"><textarea name="txt3" ></textarea></td>
+            </tr>
+            <tr>
+                    <th>Gender</th>
+                    <td><input type="radio" name="gender" value="Male">Male</input>
+<input type="radio" name="gender" value="Female">Female</input>
+<input type="radio" name="gender" value="other">Other
+</td></tr>
+<tr class="center">
+                <th colspan="2">
+                    <input type="submit" value="submit"></th>
+            </tr>
+</form></table></body></head></html>

@@ -1,0 +1,14 @@
+body{
+	background-color:slategray;
+}
+h1{
+	color:red;
+	margin-left:20px;
+}
+p{
+	color:navajowhite;
+}
+button{
+	color:navajowhite;
+	background-color:darkred;
+}

@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    table{
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:1em;
+        padding:15px;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    }
+    tr,td,th{
+        padding:10px;
+        text-align: left;
+        color: black;
+        border-collapse: collapse;
+    }
+    .center th{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        margin-top: 10px;
+        background-color:white;
+        color: black;
+    }
+    body{
+        background-color:white;
+    }
+</style>
+<body>
+    <h2>FORM VALIDATION</h2>
+    <form name="form" action="" method="POST" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <th>Username</th>
+                <td><input type="text" name="user"> </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="passcode" > </td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="fname"> </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email"> </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td width="50%"><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+                <th>Mob No.</th>
+                <td><input type="tel" name="mob"> </td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input name="age" type="text" size="3" maxlength="3"></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td><select name="country" >
+                    <option>Indian</option>
+                    <option>British</option>
+                    <option>German</option>
+                </select></td></tr>
+                <tr>
+                    <th>Gender</th>
+                    <td><input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="others" disabled>Others 
+
+                </tr>
+                <tr>
+                    <th>Language:</th>
+                    <td>
+                        <input type="checkbox" id="english" name="language" value="english">
+                        <label for="english">English</label>
+                        <input type="checkbox" id="nonEnglish" name="language" value="nonEnglish">
+                        <label for="nonEnglish">Non English</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>About:</th>
+                    <td><textarea name="about"></textarea></td>
+                </tr>
+                <tr class="center">
+                <th colspan="2"><input type="submit" value="submit"></th>
+            </tr>
+
+        </table>
+    </form>
+
+    <script>
+        function validateForm() {
+            var fname = document.form.fname.value;
+            var email=document.form.email.value;
+            var mob = document.form.mob.value;
+            var user = document.form.user.value;
+            var passcode = document.form.passcode.value;
+            var address=document.form.address.value;
+            var gender=document.form.gender.value;
+            var language=document.form.language.value;
+            var country=document.form.country.value;
+            var age=document.form.age.value;
+            var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            var ren = /[0-9!@#$%^&*]/
+            
+            if (user == "") {
+                alert("Enter User Name !!");
+                document.form.user.focus();
+                return false;
+            }
+
+            if (passcode == "" || passcode.length < 8 || !re.test(passcode)) {
+                alert("Enter minimum 8 digit Password !!" + '\n' + "Atleast one Lowercase & uppercase & digti & special charecter must be included");
+                document.form.passcode.focus();
+                return false;
+            }
+            if (fname == "") {
+                alert("Please Enter Your Name !!");
+                document.form.fname.focus();
+                return false;
+            }
+            else if(ren.test(fname)){
+                alert("Enter Valid Name !!");
+                document.form.fname.focus();
+                return false;
+            }
+            if (mob == "") {
+                alert("Enter Mobile number");
+                document.form.fname.focus();
+                return false;
+            }
+            else if (isNaN(mob)) {
+                alert("Enter valid Mobile number");
+                document.form.fname.focus();
+                return false;
+            }
+            else if (mob.length != 10) {
+                alert("Enter Mobile number with 10 digit");
+                document.form.fname.focus();
+                return false;
+            }
+            if (age == "") {
+                alert("Enter your age !!");
+                document.form.fname.focus();
+                return false;
+            } 
+            if (country == "") {
+                alert("Please select a country!!");
+                document.form.fname.focus();
+                return false;
+            } 
+            
+            }
+    </script>
+</body>
+
+</html>
+
